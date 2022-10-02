@@ -8,8 +8,7 @@ const SocialButton = (
     {buttonTitle, buttonType, color, backgroundColor, ...rest}) => { 
         
     return (
-        <TouchableOpacity style = {styles.buttonContainer} 
-        {...rest}>
+        <TouchableOpacity style = {styles.buttonContainer} {...rest}>
             <View style = {styles.iconWrapper}>
                 <Ionicons style = {styles.icon} name = {buttonType} size = {22} color = {color}/> 
             </View>

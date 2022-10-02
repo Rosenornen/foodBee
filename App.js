@@ -1,9 +1,9 @@
 import React, {useEffect} from 'react';
-import Providers from './navigation';
+import Routes from './navigation/Routes';
 
 
 const App = () => {
-  return <Providers />
+  return <Routes/>
 }
 
 export default App
