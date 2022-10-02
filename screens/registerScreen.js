@@ -5,7 +5,7 @@ import FormButton from "../components/FormButton";
 import SocialButton from "../components/SocialButton";
 import {AuthContext} from '../navigation/authProvider'
 
-const LoginScreen = ({navigation}) => {
+const RegisterScreen = ({navigation}) => {
     const [email, setEmail] = useState();
     const [password, setPassword] = useState();
     const [confirmPassword, setConfirmPassword] = useState();
@@ -74,7 +74,7 @@ const LoginScreen = ({navigation}) => {
     )
 } 
 
-export default LoginScreen
+export default RegisterScreen
 
 const styles = StyleSheet.create({
   container: {
