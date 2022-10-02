@@ -3,12 +3,23 @@ import {View, Text, Button, StyleSheet, Image, TouchableOpacity} from "react-nat
 import FormInput from "../components/FormInput"
 import FormButton from "../components/FormButton";
 import SocialButton from "../components/SocialButton";
+import {auth} from '../firebaseAuth'
 
 const RegisterScreen = ({navigation}) => {
     const [email, setEmail] = useState();
     const [password, setPassword] = useState();
     const [confirmPassword, setConfirmPassword] = useState();
 
+    const handleRegister = () => {
+      auth
+        .createUserWithEmailAndPassword(email, password)
+        .then(userCredentials => {
+          const user = userCredentials.user;
+          console.log('Registered with:', user.email);
+          navigation.replace("Login")
+        })
+        .catch(error => alert(error.message))
+    }
     
     return(
         <View style = {styles.container}>
@@ -38,7 +49,7 @@ const RegisterScreen = ({navigation}) => {
             />           
             <FormButton 
                 buttonTitle = 'Register'
-                onPress = {() => register(email, password)}
+                onPress={handleRegister}
             />
 
             <View style = {styles.textTermsPrivacy}>

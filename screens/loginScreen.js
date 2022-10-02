@@ -3,11 +3,23 @@ import {View, Text, Button, StyleSheet, Image, TouchableOpacity} from "react-nat
 import FormInput from "../components/FormInput"
 import FormButton from "../components/FormButton";
 import SocialButton from "../components/SocialButton";
+import {auth} from '../firebaseAuth'
 
 const LoginScreen = ({navigation}) => {
     const [email, setEmail] = useState();
     const [password, setPassword] = useState();
     
+    const handleLogin = () => {
+      auth
+        .signInWithEmailAndPassword(email, password)
+        .then(userCredentials => {
+          const user = userCredentials.user;
+          console.log('Logged in with:', user.email);
+          navigation.replace("Home")
+        })
+        .catch(error => alert(error.message))
+    }
+
     return(
         <View style = {styles.container}>
             <Image 
@@ -33,7 +45,7 @@ const LoginScreen = ({navigation}) => {
             />
             <FormButton 
                 buttonTitle = 'Sign In'
-                onPress = {() => alert('Sign in Clicked!')}
+                onPress = {handleLogin}
             />
             <TouchableOpacity style = {styles.forgotButton} onPress = {() => {}}>
                 <Text style = {styles.navButtonText}> Forgot Password? </Text>
