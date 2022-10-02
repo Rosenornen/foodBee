@@ -11,21 +11,24 @@ const OnboardingScreen = ({navigation}) => {
           pages = {[
             {
               backgroundColor: '#fff',
-              image: <Image source={require('../assets/picture-landscape.png')} style = {styles.image}/>,
-              title: 'Onboarding 1',
-              subtitle: 'Hej'
+              image: <Image source={require('../assets/foodbee-logo.png')} style = {styles.image}/>,
+              title: 'Tired of food waste?',
+              subtitle: 'The average person throws out 47kg of food a year',
+              backgroundColor: '#f1c33e'
             },
             {
               backgroundColor: '#fff',
-              image: <Image source={require('../assets/picture-museum.png')} style = {styles.image}/>,
-              title: 'Onboarding 2',
-              subtitle: 'Hej'
+              image: <Image source={require('../assets/foodbee-logo.png')} style = {styles.image}/>,
+              title: 'Wanna do something for you neighboor?',
+              subtitle: 'Give your neighboor the food you would otherwise throw out',
+              backgroundColor: '#77DBF8'
             },
             {
               backgroundColor: '#fff',
-              image: <Image source={require('../assets/picture-restaurant.png')} style = {styles.image}/>,
-              title: 'Onboarding 3',
-              subtitle: 'Hej'
+              image: <Image source={require('../assets/foodbee-logo.png')} style = {styles.image}/>,
+              title: 'Become part of a Community',
+              subtitle: 'Sign up today and start giving and reciving food',
+              backgroundColor: '#9AF877'
             },
           ]}
         />
@@ -41,7 +44,7 @@ const styles = StyleSheet.create({
         justifyContent: 'center'
     },
     image: {
-        width: '100%',
-        height: '100%'
+        width: 200,
+        height: 200
     }
 })

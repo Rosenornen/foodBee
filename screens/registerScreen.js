@@ -1,13 +1,16 @@
-import React, {useState} from "react";
+import React, {useState, useContext} from "react";
 import {View, Text, Button, StyleSheet, Image, TouchableOpacity} from "react-native"
 import FormInput from "../components/FormInput"
 import FormButton from "../components/FormButton";
 import SocialButton from "../components/SocialButton";
+import {AuthContext} from '../navigation/authProvider'
 
 const LoginScreen = ({navigation}) => {
     const [email, setEmail] = useState();
     const [password, setPassword] = useState();
     const [confirmPassword, setConfirmPassword] = useState();
+
+    const {register} = useContext(AuthContext)
     
     return(
         <View style = {styles.container}>
@@ -37,7 +40,7 @@ const LoginScreen = ({navigation}) => {
             />           
             <FormButton 
                 buttonTitle = 'Register'
-                onPress = {() => alert('Register Clicked!')}
+                onPress = {() => register(email, password)}
             />
 
             <View style = {styles.textTermsPrivacy}>

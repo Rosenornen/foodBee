@@ -14,7 +14,7 @@ const LoginScreen = ({navigation}) => {
                 source={require('../assets/foodbee-logo.png')}
                 style = {styles.logo}
             /> 
-            <Text style = {styles.text}> FoodBee</Text>
+            <Text style = {styles.text}> FoodBee </Text>
             <FormInput 
                 labelValue={email}
                 onChangeText = {(userEmail) => setEmail(userEmail)}
@@ -36,7 +36,7 @@ const LoginScreen = ({navigation}) => {
                 onPress = {() => alert('Sign in Clicked!')}
             />
             <TouchableOpacity style = {styles.forgotButton} onPress = {() => {}}>
-                <Text style = {styles.navButtonText}>Forgot Password?</Text>
+                <Text style = {styles.navButtonText}> Forgot Password? </Text>
             </TouchableOpacity>
             <SocialButton 
                 buttonTitle= 'Sign in with Google'
@@ -53,7 +53,7 @@ const LoginScreen = ({navigation}) => {
             <TouchableOpacity 
             style = {styles.forgotButton} 
             onPress = {() => navigation.navigate("Register")}>
-                <Text style = {styles.navButtonText}>Don't have an account? Create here</Text>
+                <Text style = {styles.navButtonText}> Don't have an account? Create here </Text>
             </TouchableOpacity>
         </View>
     )
