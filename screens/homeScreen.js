@@ -1,3 +1,4 @@
+// Importering af dependencies og components 
 import { View, Text, StyleSheet } from 'react-native'
 import React from 'react'
 import FormButton from '../components/FormButton'

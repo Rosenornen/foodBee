@@ -1,10 +1,13 @@
+// Importering af dependencies
 import React from "react";
-import {View, Text, Button, StyleSheet, Image} from "react-native"
+import {StyleSheet, Image} from "react-native"
 import Onboarding from 'react-native-onboarding-swiper';
 
 
 const OnboardingScreen = ({navigation}) => {
     return(
+        
+        // Brugt kode herfra https://github.com/jfilter/react-native-onboarding-swiper
         <Onboarding
         onSkip = {() => navigation.replace("Login")}
         onDone = {() => navigation.navigate("Login")}

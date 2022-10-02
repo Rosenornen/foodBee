@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import {View, Text, Button, StyleSheet, Image, TouchableOpacity} from "react-native"
+import {View, Text, StyleSheet, Image, TouchableOpacity} from "react-native"
 import FormInput from "../components/FormInput"
 import FormButton from "../components/FormButton";
 import SocialButton from "../components/SocialButton";
@@ -52,13 +52,13 @@ const LoginScreen = ({navigation}) => {
             </TouchableOpacity>
             <SocialButton 
                 buttonTitle= 'Sign in with Google'
-                btnType= 'logo-google'
+                buttonType= 'logo-google'
                 color = '#0f9d58'
                 onPress = {() => {}}
             /> 
             <SocialButton 
                 buttonTitle= 'Sign in with School Email'
-                btnType= 'school'
+                buttonType= 'school'
                 color = '#0f9d58'
                 onPress = {() => {}}
             /> 

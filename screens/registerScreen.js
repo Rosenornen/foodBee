@@ -1,5 +1,8 @@
-import React, {useState, useContext} from "react";
-import {View, Text, Button, StyleSheet, Image, TouchableOpacity} from "react-native"
+// Importering af dependencies
+import React, {useState} from "react";
+import {View, Text, StyleSheet, TouchableOpacity} from "react-native"
+
+// Importering af components og database
 import FormInput from "../components/FormInput"
 import FormButton from "../components/FormButton";
 import SocialButton from "../components/SocialButton";
@@ -64,13 +67,13 @@ const RegisterScreen = ({navigation}) => {
             </View>
             <SocialButton 
                 buttonTitle= 'Register with Google'
-                btnType= 'logo-google'
+                buttonType= 'logo-google'
                 color = '#0f9d58'
                 onPress = {() => {}}
             /> 
             <SocialButton 
                 buttonTitle= 'Register with School Email'
-                btnType= 'school'
+                buttonType= 'school'
                 color = '#0f9d58'
                 onPress = {() => {}}
             />

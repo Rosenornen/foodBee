@@ -1,3 +1,4 @@
+// Importering af dependencies
 import { Text, TouchableOpacity, StyleSheet } from 'react-native'
 import React from 'react'
 import { windowHeight, windowWidth } from '../utils/Dimensions'

@@ -1,21 +1,19 @@
+// Importering af dependencies
 import { Text, TouchableOpacity, StyleSheet, View } from 'react-native'
 import React from 'react'
 import { windowHeight, windowWidth } from '../utils/Dimensions'
-
 import Ionicons from "react-native-vector-icons/Ionicons";
 
 const SocialButton = (
-    {buttonTitle, btnType, color, backgroundColor, ...rest}) => {
-    
-    let bgColor = backgroundColor; 
+    {buttonTitle, buttonType, color, backgroundColor, ...rest}) => { 
         
     return (
         <TouchableOpacity style = {styles.buttonContainer} 
         {...rest}>
             <View style = {styles.iconWrapper}>
-                <Ionicons style = {styles.icon} name = {btnType} size = {22} color = {color}/> 
+                <Ionicons style = {styles.icon} name = {buttonType} size = {22} color = {color}/> 
             </View>
-            <View style = {styles.btnTxtWrapper}>
+            <View style = {styles.buttonTextWrapper}>
                 <Text style = {[styles.buttonText, {color: color}]}>{buttonTitle}</Text>
             </View>
         </TouchableOpacity>
@@ -44,7 +42,7 @@ const styles = StyleSheet.create({
     icon: {
       fontWeight: 'bold',
     },
-    btnTxtWrapper: {
+    buttonTextWrapper: {
       flex: 1,
       justifyContent: 'center',
       alignItems: 'center',

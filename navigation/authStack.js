@@ -1,8 +1,10 @@
-import React, {useEffect} from 'react';
+// Importering af dependencies
+import React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
 import {View} from 'react-native'
 import Ionicons from "react-native-vector-icons/Ionicons";
 
+// Importering af mine Screens/Views 
 import OnboardingScreen from '../screens/onboardingScreen';
 import LoginScreen from '../screens/loginScreen';
 import RegisterScreen from '../screens/registerScreen';
