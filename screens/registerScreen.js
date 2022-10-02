@@ -3,14 +3,12 @@ import {View, Text, Button, StyleSheet, Image, TouchableOpacity} from "react-nat
 import FormInput from "../components/FormInput"
 import FormButton from "../components/FormButton";
 import SocialButton from "../components/SocialButton";
-import {AuthContext} from '../navigation/authProvider'
 
 const RegisterScreen = ({navigation}) => {
     const [email, setEmail] = useState();
     const [password, setPassword] = useState();
     const [confirmPassword, setConfirmPassword] = useState();
 
-    const {register} = useContext(AuthContext)
     
     return(
         <View style = {styles.container}>
