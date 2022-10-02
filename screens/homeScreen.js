@@ -14,8 +14,8 @@ const HomeScreen = ({navigation}) => {
   }
   
   return (
-    <View>
-      <Text style = {styles.container}>Welcome</Text>
+    <View style = {styles.container}>
+      <Text >Welcome</Text>
       <FormButton buttonTitle = 'Logout' onPress = {handleSignOut}/>
     </View>
   )
@@ -24,5 +24,9 @@ const HomeScreen = ({navigation}) => {
 export default HomeScreen
 
 const styles = StyleSheet.create({
-
+    container: {
+      flex: 1, 
+      alignItems: 'center',
+      justifyContent: 'center'
+    }
 })

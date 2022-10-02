@@ -41,7 +41,7 @@ const AuthStack = ({routename, navigation}) => {
             ),
           })}
         />
-         <Stack.Screen name = 'Home' component={HomeScreen} /> 
+         <Stack.Screen name = 'Home' component={HomeScreen} options = {{header: () => null}}/> 
       </Stack.Navigator>
   )
 }
