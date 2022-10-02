@@ -10,11 +10,12 @@ import LoginScreen from '../screens/loginScreen';
 import RegisterScreen from '../screens/registerScreen';
 import HomeScreen from '../screens/homeScreen'
 
-
+// Oprettelse af Stack, der går det muligt at navigere
 const Stack = createStackNavigator();
 
+// Oprettelse af AuthStack
 const AuthStack = ({routename, navigation}) => {
-
+ // Stack.Screen er det forskellige View
   return (
       <Stack.Navigator
         initialRouteName={routename}
@@ -48,4 +49,5 @@ const AuthStack = ({routename, navigation}) => {
   )
 }
 
+// Eksportering af AuthStack navigation
 export default AuthStack

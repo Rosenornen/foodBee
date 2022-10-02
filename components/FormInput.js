@@ -4,7 +4,7 @@ import React from 'react'
 import Ionicons from "react-native-vector-icons/Ionicons";
 import { windowHeight, windowWidth } from '../utils/Dimensions'
 
-
+// Oprettelse af FormInput Component
 const FormInput = ({labelValue, placeholderText, iconType, ...rest}) => {
   return (
     <View style = {styles.inputContainer}>
@@ -23,8 +23,10 @@ const FormInput = ({labelValue, placeholderText, iconType, ...rest}) => {
   )
 }
 
+// Eksportering af FormInput
 export default FormInput
 
+// Styling af FormInput component 
 const styles = StyleSheet.create({
     inputContainer: {
       marginTop: 5,

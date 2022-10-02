@@ -3,6 +3,7 @@ import { Text, TouchableOpacity, StyleSheet } from 'react-native'
 import React from 'react'
 import { windowHeight, windowWidth } from '../utils/Dimensions'
 
+// Oprettelse af FormButton Component
 const FormButton = ({buttonTitle, ...rest}) => {
   return (
         <TouchableOpacity style = {styles.buttonContainer} {...rest}>
@@ -11,8 +12,10 @@ const FormButton = ({buttonTitle, ...rest}) => {
   )
 }
 
+// Eksportering af FormButton
 export default FormButton
 
+// Styling af FormButton component 
 const styles = StyleSheet.create({
     buttonContainer: {
         marginTop: 10, 

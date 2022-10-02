@@ -4,8 +4,9 @@ import React from 'react'
 import { windowHeight, windowWidth } from '../utils/Dimensions'
 import Ionicons from "react-native-vector-icons/Ionicons";
 
+// Oprettelse af SocialButton Component
 const SocialButton = (
-    {buttonTitle, buttonType, color, backgroundColor, ...rest}) => { 
+    {buttonTitle, buttonType, color, ...rest}) => { 
         
     return (
         <TouchableOpacity style = {styles.buttonContainer} {...rest}>
@@ -19,8 +20,10 @@ const SocialButton = (
   )
 }
 
+// Eksportering af SocialButton
 export default SocialButton
 
+// Styling af SocailButton component 
 const styles = StyleSheet.create({
     buttonContainer: {
       marginTop: 10,
