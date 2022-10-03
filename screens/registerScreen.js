@@ -8,11 +8,13 @@ import FormButton from "../components/FormButton";
 import SocialButton from "../components/SocialButton";
 import {auth} from '../firebaseAuth'
 
+// Oprettelse af RegisterScreen
 const RegisterScreen = ({navigation}) => {
     const [email, setEmail] = useState();
     const [password, setPassword] = useState();
     const [confirmPassword, setConfirmPassword] = useState();
 
+    // funktion til at register med 
     const handleRegister = () => {
       auth
         .createUserWithEmailAndPassword(email, password)
@@ -24,6 +26,7 @@ const RegisterScreen = ({navigation}) => {
         .catch(error => alert(error.message))
     }
     
+    // Hvad brugeren ser
     return(
         <View style = {styles.container}>
             <Text style = {styles.text}> Create an Account</Text>
@@ -31,7 +34,7 @@ const RegisterScreen = ({navigation}) => {
                 labelValue={email}
                 onChangeText = {(userEmail) => setEmail(userEmail)}
                 placeholderText = 'Email'
-                iconType = 'person-outline'
+                iconType = 'mail-outline'
                 keyboardType = 'email-address'
                 autoCapitalize = 'none'
                 autoCorrect = 'false'
@@ -86,8 +89,10 @@ const RegisterScreen = ({navigation}) => {
     )
 } 
 
+// Eksportering af RegisterScreen
 export default RegisterScreen
 
+// Styling af RegisterScreen
 const styles = StyleSheet.create({
   container: {
     backgroundColor: '#f9fafd',

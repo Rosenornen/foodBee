@@ -1,3 +1,4 @@
+// Importering af dependencies og components 
 import React, {useState} from "react";
 import {View, Text, StyleSheet, Image, TouchableOpacity} from "react-native"
 import FormInput from "../components/FormInput"
@@ -5,10 +6,12 @@ import FormButton from "../components/FormButton";
 import SocialButton from "../components/SocialButton";
 import {auth} from '../firebaseAuth'
 
+// Oprettelse af LoginScreen
 const LoginScreen = ({navigation}) => {
     const [email, setEmail] = useState();
     const [password, setPassword] = useState();
     
+      // funktion til at logge ind med 
     const handleLogin = () => {
       auth
         .signInWithEmailAndPassword(email, password)
@@ -20,6 +23,7 @@ const LoginScreen = ({navigation}) => {
         .catch(error => alert(error.message))
     }
 
+    // Hvad brugeren ser
     return(
         <View style = {styles.container}>
             <Image 
@@ -31,7 +35,7 @@ const LoginScreen = ({navigation}) => {
                 labelValue={email}
                 onChangeText = {(userEmail) => setEmail(userEmail)}
                 placeholderText = 'Email'
-                iconType = 'person-outline'
+                iconType = 'mail-outline'
                 keyboardType = 'email-address'
                 autoCapitalize = 'none'
                 autoCorrect = 'false'
@@ -71,8 +75,10 @@ const LoginScreen = ({navigation}) => {
     )
 } 
 
+// Eksportering af LoginScreen
 export default LoginScreen
 
+// Styling af LoginScreen
 const styles = StyleSheet.create({
     container: {
       justifyContent: 'center',

@@ -4,7 +4,9 @@ import React from 'react'
 import FormButton from '../components/FormButton'
 import { auth } from '../firebaseAuth'
 
+// Oprettelse af HomeScreen
 const HomeScreen = ({navigation}) => {
+  // funktion til at logge ud med 
   const handleSignOut = () => {
     auth
     .signOut()
@@ -14,6 +16,7 @@ const HomeScreen = ({navigation}) => {
     .catch(error => alert(error.message))
   }
   
+  // Hvad brugeren ser
   return (
     <View style = {styles.container}>
       <Text >Welcome</Text>
@@ -22,8 +25,10 @@ const HomeScreen = ({navigation}) => {
   )
 }
 
+// Eksportering af HomeScreen
 export default HomeScreen
 
+// Styling af HomeScreen
 const styles = StyleSheet.create({
     container: {
       flex: 1, 

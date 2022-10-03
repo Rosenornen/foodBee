@@ -3,7 +3,7 @@ import React from "react";
 import {StyleSheet, Image} from "react-native"
 import Onboarding from 'react-native-onboarding-swiper';
 
-
+// Oprettelse af OnboardingScreen 
 const OnboardingScreen = ({navigation}) => {
     return(
         
@@ -38,8 +38,10 @@ const OnboardingScreen = ({navigation}) => {
     )
 } 
 
+// Eksportering af OnboardingScreen
 export default OnboardingScreen
 
+// Styling af OnboardingScreen
 const styles = StyleSheet.create({
     container: {
         flex: 1, 
